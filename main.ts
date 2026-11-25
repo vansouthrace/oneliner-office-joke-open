@@ -1,4 +1,9 @@
-import fs from 'node:fs';
-const ENTRY = "Our daily standup is the only meeting where everyone stands, says nothing, and sits back down to do the work they were already doing.";
-fs.mkdirSync('/output', { recursive: true });
-fs.writeFileSync('/output/entry.txt', ENTRY, 'utf8');
+import { mkdirSync, writeFileSync } from "node:fs";
+
+// Make the AI Judge Laugh: the Office Joke Open — one line of office comedy.
+const entry =
+  "My calendar invited me to a meeting about a meeting to plan the meeting. I declined, and now HR wants a meeting about my attitude.";
+
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry + "\n");
+console.log(entry);
